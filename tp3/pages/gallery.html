@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galerie Photos — Événements Marwa | Nos plus beaux événements</title>
+  <meta name="description" content="Découvrez la galerie photos d'Événements Marwa : mariages, conférences, soirées et lancements de produits. Une sélection de nos plus beaux événements." />
+  <meta name="keywords" content="galerie photos événements, mariage photos, décoration événement, soirée entreprise photos, organisateur événement réalisations" />
+  <meta name="author" content="Événements Marwa" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Galerie Photos — Événements Marwa" />
+  <meta property="og:description" content="Une sélection de nos plus beaux événements : mariages, conférences, soirées et lancements de produits." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.evenementsmarwa.fr/pages/gallery.html" />
+  <meta property="og:image" content="../images/og-gallery.jpg" />
+
+  <link rel="canonical" href="https://www.evenementsmarwa.fr/pages/gallery.html" />
+  <link rel="icon" href="../images/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../css/all.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <!-- ====== NAVIGATION ====== -->
+  <nav class="navbar" aria-label="Navigation principale">
+    <div class="container">
+      <a href="../index.html" class="nav-logo">
+        <div class="logo-icon"><i class="fas fa-star"></i></div>
+        <div class="logo-text">
+          <span class="logo-name">Événements Marwa</span>
+          <span class="logo-sub">Excellence &amp; Élégance</span>
+        </div>
+      </a>
+      <ul class="nav-links" role="menubar">
+        <li role="none"><a href="../index.html" role="menuitem">Accueil</a></li>
+        <li role="none"><a href="about.html" role="menuitem">À propos</a></li>
+        <li role="none"><a href="services.html" role="menuitem">Services</a></li>
+        <li role="none"><a href="gallery.html" role="menuitem" class="active">Galerie</a></li>
+        <li role="none"><a href="contact.html" role="menuitem" class="nav-cta">Nous contacter</a></li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ====== PAGE HERO ====== -->
+  <header class="page-hero">
+    <picture>
+      <source srcset="../images/img6.jpg" media="(min-width: 1024px)" />
+      <source srcset="../images/img7.jpg" media="(min-width: 768px)" />
+      <img class="page-hero-bg" src="../images/img1.jpg" alt="Belle décoration de mariage" />
+    </picture>
+    <div class="page-hero-overlay" aria-hidden="true"></div>
+    <div class="container page-hero-content">
+      <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <a href="../index.html">Accueil</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">Galerie</span>
+      </nav>
+      <h1>Notre galerie de réalisations</h1>
+      <p>Chaque photo raconte l'histoire d'un moment exceptionnel que nous avons créé ensemble</p>
+    </div>
+  </header>
+
+  <!-- ====== GALERIE ====== -->
+  <section aria-labelledby="galerie-heading">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag">Portfolio</span>
+        <h2 class="section-title" id="galerie-heading">Nos plus belles réalisations</h2>
+        <p class="section-sub">Filtrez par catégorie pour explorer nos événements.</p>
+      </div>
+
+      <!-- Filtres -->
+      <div class="gallery-filter" role="group" aria-label="Filtrer la galerie">
+        <button class="filter-btn active" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="mariage">Mariages</button>
+        <button class="filter-btn" data-filter="conference">Conférences</button>
+        <button class="filter-btn" data-filter="soiree">Soirées</button>
+        <button class="filter-btn" data-filter="lancement">Lancements</button>
+        <button class="filter-btn" data-filter="decoration">Décoration</button>
+      </div>
+
+      <!-- Grille galerie -->
+      <div class="gallery-grid" role="list">
+
+        <!-- Mariage 1 -->
+        <article class="gallery-item" data-category="mariage" role="listitem">
+          <picture>
+            <source
+              srcset="../images/img2.jpg"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="../images/img3.jpg"
+              media="(min-width: 480px)"
+            />
+            <img
+              src="../images/img4.jpg"
+              alt="Mariage élégant — table décorée de fleurs blanches et dorées"
+              loading="lazy"
+            />
+          </picture>
+          <div class="gallery-overlay">
+            <div>
+              <div class="gallery-label">Mariage Sarah &amp; Lucas</div>
+              <div class="gallery-sub">Château de Vaux-le-Vicomte</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Conférence 1 -->
+        <article class="gallery-item" data-category="conference" role="listitem">
+          <picture>
+            <source
+              srcset="../images/img5.jpg"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="../images/img6.jpg"
+              media="(min-width: 480px)"
+            />
+            <img
+              src="../images/img7.jpg"
+              alt="Grande conférence professionnelle — scène avec écrans géants"
+              loading="lazy"
+            />
+          </picture>
+          <div class="gallery-overlay">
+            <div>
+              <div class="gallery-label">Forum RH 2024</div>
+              <div class="gallery-sub">Palais des Congrès, Casablanca</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Soirée 1 -->
+        <article class="gallery-item" data-category="soiree" role="listitem">
+          <picture>
+            <source
+              srcset="../images/img1.jpg"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="../images/img2.jpg"
+              media="(min-width: 480px)"
+            />
+            <img
+              src="../images/img3.jpg"
+              alt="Soirée DJ — lumières colorées sur piste de danse"
+              loading="lazy"
+            />
+          </picture>
+          <div class="gallery-overlay">
+            <div>
+              <div class="gallery-label">Gala Annuel TechCorp</div>
+              <div class="gallery-sub">Megarama, Casablanca</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Lancement 1 -->
+        <article class="gallery-item" data-category="lancement" role="listitem">
+          <picture>
+            <source
+              srcset="../images/img4.jpg"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="../images/img5.jpg"
+              media="(min-width: 480px)"
+            />
+            <img
+              src="../images/img6.jpg"
+              alt="Lancement de produit — scène avec spots et décor moderne"
+              loading="lazy"
+            />
+          </picture>
+          <div class="gallery-overlay">
+            <div>
+              <div class="gallery-label">Lancement Collection Beauté Lumière</div>
+              <div class="gallery-sub">Hôtel Four Seasons, Casablanca</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Décoration 1 -->
+        <article class="gallery-item" data-category="decoration" role="listitem">
+          <picture>
+            <source
+              srcset="../images/img7.jpg"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="../images/img1.jpg"
+              media="(min-width: 480px)"
+            />
+            <img
+              src="../images/img2.jpg"
+              alt="Décoration florale élaborée — arches de roses blanches"
+              loading="lazy"
+            />
+          </picture>
+          <div class="gallery-overlay">
+            <div>
+              <div class="gallery-label">Scénographie Florale</div>
+              <div class="gallery-sub">Mariage — Domaine des Roses</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Mariage 2 -->
+        <article class="gallery-item" data-category="mariage" role="listitem">
+          <picture>
+            <source
+              srcset="../images/img3.jpg"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="../images/img4.jpg"
+              media="(min-width: 480px)"
+            />
+            <img
+              src="../images/img5.jpg"
+              alt="Couple de mariés devant une arche fleurie"
+              loading="lazy"
+            />
+          </picture>
+          <div class="gallery-overlay">
+            <div>
+              <div class="gallery-label">Mariage Nadia &amp; Romain</div>
+              <div class="gallery-sub">Domaine de Montmirail</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Conférence 2 -->
+        <article class="gallery-item" data-category="conference" role="listitem">
+          <picture>
+            <source
+              srcset="../images/img6.jpg"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="../images/img7.jpg"
+              media="(min-width: 480px)"
+            />
+            <img
+              src="../images/img1.jpg"
+              alt="Conférence internationale — intervenant sur scène"
+              loading="lazy"
+            />
+          </picture>
+          <div class="gallery-overlay">
+            <div>
+              <div class="gallery-label">Sommet Innovation 2024</div>
+              <div class="gallery-sub">Technopark, Casablanca</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Soirée 2 -->
+        <article class="gallery-item" data-category="soiree" role="listitem">
+          <picture>
+            <source
+              srcset="../images/img2.jpg"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="../images/img3.jpg"
+              media="(min-width: 480px)"
+            />
+            <img
+              src="../images/img4.jpg"
+              alt="Grande salle de réception décorée pour une soirée de gala"
+              loading="lazy"
+            />
+          </picture>
+          <div class="gallery-overlay">
+            <div>
+              <div class="gallery-label">Soirée Prestige Groupe Horizon</div>
+              <div class="gallery-sub">Mosquée Hassan II, Casablanca</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Décoration 2 -->
+        <article class="gallery-item" data-category="decoration" role="listitem">
+          <picture>
+            <source
+              srcset="../images/img5.jpg"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="../images/img6.jpg"
+              media="(min-width: 480px)"
+            />
+            <img
+              src="../images/img7.jpg"
+              alt="Salle de réception avec éclairage doré et chandeliers"
+              loading="lazy"
+            />
+          </picture>
+          <div class="gallery-overlay">
+            <div>
+              <div class="gallery-label">Ambiance Dorée</div>
+              <div class="gallery-sub">Gala de Charité — Quartier Anfa</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Lancement 2 -->
+        <article class="gallery-item" data-category="lancement" role="listitem">
+          <picture>
+            <source
+              srcset="../images/img1.jpg"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="../images/img2.jpg"
+              media="(min-width: 480px)"
+            />
+            <img
+              src="../images/img3.jpg"
+              alt="Foule lors d'un événement de lancement avec confettis"
+              loading="lazy"
+            />
+          </picture>
+          <div class="gallery-overlay">
+            <div>
+              <div class="gallery-label">Lancement Nouvelle Collection Mode</div>
+              <div class="gallery-sub">Morocco Mall, Casablanca</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Mariage 3 -->
+        <article class="gallery-item" data-category="mariage" role="listitem">
+          <picture>
+            <source
+              srcset="../images/img4.jpg"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="../images/img5.jpg"
+              media="(min-width: 480px)"
+            />
+            <img
+              src="../images/img6.jpg"
+              alt="Allée de mariage en plein air décorée de fleurs et bougies"
+              loading="lazy"
+            />
+          </picture>
+          <div class="gallery-overlay">
+            <div>
+              <div class="gallery-label">Mariage en Plein Air</div>
+              <div class="gallery-sub">Château de Chantilly</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Soirée 3 -->
+        <article class="gallery-item" data-category="soiree" role="listitem">
+          <picture>
+            <source
+              srcset="../images/img7.jpg"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="../images/img1.jpg"
+              media="(min-width: 480px)"
+            />
+            <img
+              src="../images/img2.jpg"
+              alt="Soirée anniversaire avec show de lumières"
+              loading="lazy"
+            />
+          </picture>
+          <div class="gallery-overlay">
+            <div>
+              <div class="gallery-label">Anniversaire 50 ans</div>
+              <div class="gallery-sub">Loft privé — Quartier Gauthier</div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== INSTAGRAM / SOCIAL ====== -->
+  <section class="social-section" aria-label="Suivez-nous sur les réseaux">
+    <div class="container">
+      <span class="section-tag">Réseaux sociaux</span>
+      <h2 class="section-title">Suivez-nous sur Instagram</h2>
+      <p class="section-sub">Découvrez nos coulisses, inspirations et réalisations en temps réel sur Instagram</p>
+      <div class="social-grid">
+        <a href="#" class="social-link">
+          <i class="fab fa-instagram" class="social-icon-ig"></i>
+          Instagram
+        </a>
+        <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" class="social-link">
+          <i class="fab fa-facebook-f" class="social-icon-fb"></i>
+          Événements Marwa
+        </a>
+        <a href="https://pinterest.com/" target="_blank" rel="noopener noreferrer" class="social-link">
+          <i class="fab fa-pinterest-p" class="social-icon-pi"></i>
+          Événements Marwa
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CTA ====== -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Votre événement sera le prochain dans notre galerie</h2>
+      <p>Confiez-nous l'organisation de votre moment unique et laissez-nous créer quelque chose d'extraordinaire.</p>
+      <a href="contact.html" class="btn btn-outline"><i class="fas fa-calendar-check"></i> Planifier mon événement</a>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="nav-logo">
+            <div class="logo-icon"><i class="fas fa-star"></i></div>
+            <div class="logo-text">
+              <span class="logo-name">Événements Marwa</span>
+              <span class="logo-sub">Excellence &amp; Élégance</span>
+            </div>
+          </a>
+          <p>Depuis 2012, nous créons des expériences événementielles sur mesure qui laissent des traces durables dans les mémoires et les cœurs.</p>
+          <div class="footer-social" aria-label="Réseaux sociaux">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://pinterest.com/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+            <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <nav aria-label="Plan du site — Pages">
+          <h4>Plan du site</h4>
+          <ul>
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="services.html">Nos services</a></li>
+            <li><a href="gallery.html">Galerie</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Plan du site — Services">
+          <h4>Nos services</h4>
+          <ul>
+            <li><a href="services.html#mariage">Mariages</a></li>
+            <li><a href="services.html#conference">Conférences</a></li>
+            <li><a href="services.html#soiree">Soirées &amp; Galas</a></li>
+            <li><a href="services.html#lancement">Lancements produits</a></li>
+            <li><a href="services.html#anniversaire">Anniversaires</a></li>
+            <li><a href="services.html#decoration">Décoration</a></li>
+          </ul>
+        </nav>
+                <address>
+          <h4>Contact</h4>
+          <div class="footer-contact-item">
+            <i class="fas fa-map-marker-alt footer-contact-icon"></i>
+            <span>23 Boulevard Zerktouni, Casablanca, Maroc</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-phone footer-contact-icon"></i>
+            <a href="tel:+212612345678" class="text-inherit">+212 6 12 34 56 78</a>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-envelope footer-contact-icon"></i>
+            <a href="mailto:contact@evenementsmarwa.ma" class="text-inherit">contact@evenementsmarwa.ma</a>
+          </div>
+        </address>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Événements Marwa. Tous droits réservés.</p>
+        <nav class="footer-legal" aria-label="Mentions légales">
+          <a href="#">Mentions légales</a>
+          <a href="#">Politique de confidentialité</a>
+          <a href="#">CGV</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

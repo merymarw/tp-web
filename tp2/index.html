@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <a href="../index.html" style="display:inline-block; margin: 20px 20px 0; text-decoration: none; color: #333; font-weight: bold; background: #eee; padding: 10px 15px; border-radius: 5px;">⬅ Retour à l'accueil</a>
+
+    <h1>✨ Formulaire d'inscription</h1>
+
+    <form id="form">
+
+        <fieldset>
+            <legend>Informations personnelles</legend>
+
+            <div class="row">
+                <div class="field">
+                    <label for="prenom">Prénom <span class="req">*</span></label>
+                    <input type="text" id="prenom" name="prenom" required minlength="2" autocomplete="given-name" placeholder="Ex: Jean">
+                </div>
+                <div class="field">
+                    <label for="nom">Nom <span class="req">*</span></label>
+                    <input type="text" id="nom" name="nom" required minlength="2" autocomplete="family-name" placeholder="Ex: Dupont">
+                </div>
+            </div>
+
+            <div class="field">
+                <label for="email">Email <span class="req">*</span> <small style="color: #666; font-weight: normal; font-size: 0.85em;">(ex: nom@domaine.fr)</small></label>
+                <input type="email" id="email" name="email" required autocomplete="email" placeholder="nom@domaine.fr">
+            </div>
+
+            <div class="field">
+                <label for="telephone">Téléphone <span class="req">*</span> <small style="color: #666; font-weight: normal; font-size: 0.85em;">(ex: 06 12 34 56 78)</small></label>
+                <input type="tel" id="telephone" name="telephone" pattern="^(0[1-9](\s?\d{2}){4})$" required title="Format : 10 chiffres (ex: 01 23 45 67 89 ou 0123456789)" autocomplete="tel" placeholder="06 12 34 56 78">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Date de naissance</legend>
+            
+            <div class="field">
+                <label for="ddn">Date de naissance <span class="req">*</span> <small style="color: #666; font-weight: normal; font-size: 0.85em;">(jj/mm/aaaa, 18 ans min)</small></label>
+                <input type="date" id="ddn" name="ddn" required autocomplete="bday">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Mot de passe</legend>
+
+            <div class="field">
+                <label for="password">Mot de passe <span class="req">*</span> <small style="color: #666; font-weight: normal; font-size: 0.85em;">(8 car. min, 1 majuscule, 1 chiffre)</small></label>
+                <input type="password" id="password" name="password" pattern="(?=.*[A-Z])(?=.*\d).{8,}" required title="Au moins 8 caractères, 1 majuscule et 1 chiffre" autocomplete="new-password">
+            </div>
+
+            <div class="field">
+                <label for="confirm">Confirmation <span class="req">*</span> <small style="color: #666; font-weight: normal; font-size: 0.85em;">(identique au mot de passe)</small></label>
+                <input type="password" id="confirm" name="confirm" required autocomplete="new-password">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Pays</legend>
+
+            <div class="field">
+                <label for="pays">Votre pays de résidence <span class="req">*</span></label>
+                <select id="pays" name="pays" required autocomplete="country-name">
+                    <option value="">-- Choisir un pays --</option>
+                    <option value="France">France</option>
+                    <option value="Maroc">Maroc</option>
+                </select>
+            </div>
+
+            <div class="field" style="margin-top: 10px;">
+                <label for="autre_pays">Autre pays <small style="color: #666; font-weight: normal; font-size: 0.85em;">(facultatif)</small></label>
+                <input list="liste_pays" id="autre_pays" name="autre_pays" placeholder="Autre pays..." autocomplete="country-name">
+                <datalist id="liste_pays">
+                    <option value="Espagne">
+                    <option value="Italie">
+                </datalist>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Profil</legend>
+
+            <div class="field">
+                <label>Genre <span class="req">*</span></label>
+                <div class="radio-group">
+                    <label><input type="radio" name="genre" value="femme" required> Femme</label>
+                    <label><input type="radio" name="genre" value="homme"> Homme</label>
+                </div>
+            </div>
+
+            <div class="field" style="margin-top: 10px;">
+                <label>Centres d'intérêt</label>
+                <div class="check-group">
+                    <label><input type="checkbox" name="interets" value="sport"> Sport</label>
+                    <label><input type="checkbox" name="interets" value="tech"> Tech</label>
+                </div>
+            </div>
+
+            <div class="field" style="margin-top: 10px;">
+                <label for="bio">Biographie <small style="color: #666; font-weight: normal; font-size: 0.85em;">(300 caractères max)</small></label>
+                <textarea id="bio" name="bio" maxlength="300" placeholder="Racontez-nous brièvement votre parcours..."></textarea>
+            </div>
+
+            <div class="field" style="margin-top: 10px;">
+                <label for="photo">Photo de profil <small style="color: #666; font-weight: normal; font-size: 0.85em;">(image uniquement)</small></label>
+                <input type="file" id="photo" name="photo" accept="image/*">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Conditions</legend>
+            <label>
+                <input type="checkbox" name="cgu" required> Accepter les Conditions Générales d'Utilisation <span class="req">*</span>
+            </label>
+        </fieldset>
+
+        <button type="submit">S'inscrire</button>
+
+    </form>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marwa Souihla – CV Portfolio</title>
+  <meta name="description"
+    content="Portfolio de Marwa Souihla, étudiante en Ingénierie Informatique. Découvrez mon profil, mes compétences, mes formations et mes projets." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=DM+Mono:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+</head>
+
+<body>
+  <!-- Fond interactif -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- ══════════════ HEADER ══════════════ -->
+  <header>
+    <div class="header-inner">
+      <div class="avatar-wrap" role="img" aria-label="Initiales de Marwa Souihla">
+        <span class="avatar-initials">MS</span>
+      </div>
+      <div class="header-text">
+        <h1>SOUIHLA <span>Marwa</span></h1>
+        <h2 class="typewriter-text">Étudiante en Ingénierie Informatique</h2>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══════════════ NAVIGATION ══════════════ -->
+  <nav aria-label="Navigation principale">
+    <ul>
+      <li><a href="../index.html">⬅ Retour à l'accueil</a></li>
+      <li><a href="#a-propos" class="active">À propos</a></li>
+      <li><a href="#competences">Compétences</a></li>
+      <li><a href="#formations">Formations</a></li>
+      <li><a href="#projets">Projets</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ══════════════ MAIN ══════════════ -->
+  <main>
+
+    <!-- ── À PROPOS ── -->
+    <section id="a-propos" aria-labelledby="titre-a-propos">
+      <div class="reveal">
+        <p class="section-label">Profil</p>
+        <h3 id="titre-a-propos">À propos de moi</h3>
+      </div>
+
+      <div class="about-flex-container">
+        <div class="about-photo reveal reveal-delay-1">
+          <div class="about-photo-frame">
+            <!-- Remplacer le src par une vraie photo si nécessaire -->
+            <img src="assets/profile.jpg" alt="Portrait de Marwa Souihla" onerror="this.style.display='none'" />
+            <span class="avatar-initials-big">MS</span>
+          </div>
+          <p class="photo-caption">Marwa Souihla</p>
+        </div>
+        <div class="about-content reveal reveal-delay-2">
+          <p>
+            Étudiante en 1<sup>re</sup> année d'Ingénierie Informatique, spécialité
+            <strong>Cybersécurité et Confiance Numérique</strong> à l'ENSET, je suis
+            passionnée par les technologies numériques et la sécurité informatique.
+          </p>
+          <p>
+            Curieuse et rigoureuse, je m'investis pleinement dans l'acquisition de
+            nouvelles compétences et la résolution de problématiques techniques.
+
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── COMPÉTENCES ── -->
+    <section id="competences" aria-labelledby="titre-competences">
+      <div class="reveal">
+        <p class="section-label">Savoir-faire</p>
+        <h3 id="titre-competences">Compétences techniques</h3>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-category reveal reveal-delay-1">
+          <h5>Développement web</h5>
+          <ul>
+            <li>HTML / CSS</li>
+            <li>JavaScript</li>
+            <li>React.js</li>
+          </ul>
+        </div>
+
+        <div class="skill-category reveal reveal-delay-2">
+          <h5>Programmation</h5>
+          <ul>
+            <li>Python</li>
+            <li>C / C++</li>
+          </ul>
+        </div>
+
+        <div class="skill-category reveal reveal-delay-3">
+          <h5>Bases de données</h5>
+          <ul>
+            <li>SQL</li>
+            <li>MySQL</li>
+          </ul>
+        </div>
+
+        <div class="skill-category reveal reveal-delay-1">
+          <h5>Systèmes &amp; Réseaux</h5>
+          <ul>
+            <li>Linux</li>
+
+            <li>Réseaux informatiques</li>
+          </ul>
+        </div>
+
+        <div class="skill-category reveal reveal-delay-2">
+          <h5>Compétences Humaines</h5>
+          <ul>
+            <li>Travail en équipe</li>
+            <li>Gestion de projet</li>
+            <li>Mentorat</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FORMATIONS / EXPÉRIENCES ── -->
+    <section id="formations" aria-labelledby="titre-formations">
+      <div class="reveal">
+        <p class="section-label">Parcours</p>
+        <h3 id="titre-formations">Formations &amp; Expériences</h3>
+      </div>
+
+      <div class="table-container reveal reveal-delay-1">
+        <table>
+          <caption
+            style="text-align:left; font-size:11px; letter-spacing:2px; color:var(--muted); text-transform:uppercase; margin-bottom:12px;">
+            Historique académique
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Période</th>
+              <th scope="col">Diplôme / Titre</th>
+              <th scope="col">Établissement</th>
+              <th scope="col">Spécialité</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><time datetime="2025">2025</time> – Présent</td>
+              <td>
+                <strong>1re année Ingénierie Informatique</strong>
+                En cours
+              </td>
+              <td>ENSET – École Normale Sup. de l'Enseignement Technique</td>
+              <td>Cybersécurité &amp; Confiance Numérique</td>
+            </tr>
+            <tr>
+              <td><time datetime="2023">2023</time> – <time datetime="2025">2025</time></td>
+              <td>
+                <strong>DEUG Développement Informatique (MIP)</strong>
+                Obtenu
+              </td>
+              <td>Faculté des Sciences Ben M'Sik</td>
+              <td>Mathématiques, Informatique, Physique</td>
+            </tr>
+            <tr>
+              <td><time datetime="2023">2023</time></td>
+              <td>
+                <strong>Baccalauréat</strong>
+                Obtenu
+              </td>
+              <td>Lycée Alia</td>
+              <td>Sciences Mathématiques A</td>
+            </tr>
+            <!-- removed mentor tr -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ── PROJETS ── -->
+    <section id="projets" aria-labelledby="titre-projets">
+      <div class="reveal">
+        <p class="section-label">Réalisations</p>
+        <h3 id="titre-projets">Expériences &amp; Projets académiques</h3>
+      </div>
+
+      <ul class="projects-list">
+        <li class="reveal reveal-delay-1">
+          <p class="project-name">Simulation d’un système de transport</p>
+          <p class="project-type">Projet académique</p>
+          <p class="project-type">Technologies : C/C++ (simple simulation)</p>
+        </li>
+
+        <li class="reveal reveal-delay-3">
+          <p class="project-name">Portfolio en ligne</p>
+          <p class="project-type">Projet personnel</p>
+          <p class="project-type">Technologies : HTML, CSS, JavaScript, React.js, Git/GitHub, Tailwind CSS</p>
+        </li>
+        <li class="reveal reveal-delay-1">
+          <p class="project-name">Boutique de gâteaux en ligne</p>
+          <p class="project-type">Projet académique / personnel</p>
+          <p class="project-type">Technologies : React.js (front-end uniquement), HTML, CSS, JavaScript</p>
+        </li>
+        <li class="reveal reveal-delay-2">
+          <p class="project-name">Site web pour le Club Ibn Khaldoun de FSBM</p>
+          <p class="project-type">Projet académique / associatif</p>
+          <p class="project-type">Technologies : HTML, CSS</p>
+        </li>
+        <li class="reveal reveal-delay-3">
+          <p class="project-name">Projet de reconnaissance faciale</p>
+          <p class="project-type">Projet académique / personnel</p>
+          <p class="project-type">Technologies : Python, OpenCV, face_recognition ou dlib, NumPy, pandas</p>
+        </li>
+        <li class="reveal reveal-delay-1">
+          <p class="project-name">Projet d’analyse de sentiments en Python</p>
+          <p class="project-type">Projet académique / personnel</p>
+          <p class="project-type">Technologies : Python, NLTK ou spaCy, scikit-learn ou TensorFlow/Keras, pandas, NumPy,
+            matplotlib ou seaborn</p>
+        </li>
+        <li class="reveal reveal-delay-2">
+          <p class="project-name">Mentor – DigiGirlz Program</p>
+          <p class="project-type">Expérience | 2026</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ── CONTACT, LANGUES, INTÉRÊTS ── -->
+    <section id="contact" aria-labelledby="titre-contact">
+      <div class="reveal">
+        <p class="section-label">Informations</p>
+        <h3 id="titre-contact">Contact &amp; Informations personnelles</h3>
+      </div>
+
+      <div class="info-blocks">
+
+        <!-- Contact -->
+        <div class="info-block reveal reveal-delay-1">
+          <h5>Contactez-moi</h5>
+          <ul class="contact-list">
+            <li>
+              <span class="icon" aria-hidden="true">📞</span>
+              <a href="tel:+212695701001" rel="noopener">0695 70 10 01</a>
+            </li>
+            <li>
+              <span class="icon" aria-hidden="true">✉</span>
+              <a href="mailto:marwasouihla@gmail.com" rel="noopener">marwasouihla@gmail.com</a>
+            </li>
+            <li>
+              <span class="icon" aria-hidden="true">📍</span>
+              Mohammedia, Maroc
+            </li>
+          </ul>
+
+          <!-- Réseaux sociaux -->
+          <h5 style="margin-top:20px;">Réseaux sociaux</h5>
+          <ul class="contact-list">
+            <li>
+              <span class="icon" aria-hidden="true">💼</span>
+              <a href="https://www.linkedin.com/in/marwa-souihla-02454b335/" target="_blank" rel="noopener noreferrer"
+                aria-label="Profil LinkedIn de Marwa Souihla">LinkedIn</a>
+            </li>
+            <li>
+              <span class="icon" aria-hidden="true">🐙</span>
+              <a href="https://github.com/merymarw" target="_blank" rel="noopener noreferrer"
+                aria-label="Profil GitHub de Marwa Souihla">GitHub</a>
+            </li>
+            <li>
+              <span class="icon" aria-hidden="true">🌐</span>
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                aria-label="Portfolio personnel de Marwa Souihla">Portfolio</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Langues -->
+        <div class="info-block reveal reveal-delay-2">
+          <h5>Langues</h5>
+          <ul class="lang-list">
+            <li>
+              <span>Arabe</span>
+              <span class="lang-dot" aria-label="Niveau natif">
+                <span class="filled"></span><span class="filled"></span>
+                <span class="filled"></span><span class="filled"></span><span class="filled"></span>
+              </span>
+            </li>
+            <li>
+              <span>Français</span>
+              <span class="lang-dot" aria-label="Niveau avancé">
+                <span class="filled"></span><span class="filled"></span>
+                <span class="filled"></span><span class="filled"></span><span></span>
+              </span>
+            </li>
+            <li>
+              <span>Anglais</span>
+              <span class="lang-dot" aria-label="Niveau intermédiaire">
+                <span class="filled"></span><span class="filled"></span>
+                <span class="filled"></span><span></span><span></span>
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Intérêts -->
+        <div class="info-block reveal reveal-delay-3">
+          <h5>Intérêts</h5>
+          <ul class="interests-list">
+            <li>Nature</li>
+            <li>Cuisine</li>
+            <li>Bénévolat</li>
+            <li>Cyclisme</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer>
+    <p>© 2026 <span>Marwa Souihla</span> — Tous droits réservés</p>
+  </footer>
+
+  <!-- JavaScript (Mise en surbrillance automatique lors du défilement) -->
+  <script defer type="module" src="index.js"></script>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
