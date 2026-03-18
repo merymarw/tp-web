@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travaux Pratiques – Sarah Naciri</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+    <style>
+        /* ── Variables ── */
+        :root {
+            --cream: #faf6f0;
+            --cream-dark: #f0ead9;
+            --tan: #d4b896;
+            --caramel: #b8844a;
+            --brown: #6b4a2a;
+            --deep: #3a2510;
+            --warm-white: #fffdf8;
+            --accent: #c97b3a;
+            --accent-lt: #e8a96a;
+            --border: #ddd0be;
+        }
+
+        /* ── Reset ── */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--cream);
+            color: var(--deep);
+            min-height: 100vh;
+        }
+
+        /* ── HERO ── */
+        .hero {
+            position: relative;
+            background: var(--brown);
+            overflow: hidden;
+            padding: 80px 40px 100px;
+            text-align: center;
+        }
+
+        /* Grain overlay */
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.15'/%3E%3C/svg%3E");
+            background-size: 180px;
+            opacity: 0.35;
+            pointer-events: none;
+        }
+
+        /* Warm diagonal accent */
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--caramel), var(--accent-lt), var(--tan));
+        }
+
+        /* Decorative circle */
+        .hero-deco {
+            position: absolute;
+            width: 420px;
+            height: 420px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, .08);
+            top: -140px;
+            right: -80px;
+            pointer-events: none;
+        }
+
+        .hero-deco-2 {
+            position: absolute;
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(212, 184, 150, .18) 0%, transparent 70%);
+            bottom: 20px;
+            left: -60px;
+            pointer-events: none;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.8rem, 8vw, 5rem);
+            font-weight: 900;
+            color: var(--cream);
+            letter-spacing: .04em;
+            text-transform: uppercase;
+            position: relative;
+            animation: fadeDown .7s ease both;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            margin-top: 28px;
+            padding: 12px 32px;
+            background: rgba(58, 37, 16, .55);
+            border: 1px solid rgba(212, 184, 150, .35);
+            border-radius: 50px;
+            font-size: .95rem;
+            font-weight: 300;
+            letter-spacing: .06em;
+            color: var(--cream);
+            backdrop-filter: blur(6px);
+            position: relative;
+            animation: fadeDown .7s .15s ease both;
+        }
+
+        /* ── MAIN ── */
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 70px 24px 80px;
+        }
+
+        .section-intro {
+            text-align: center;
+            margin-bottom: 56px;
+            animation: fadeUp .6s .25s ease both;
+        }
+
+        .section-intro h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.7rem, 4vw, 2.4rem);
+            font-weight: 700;
+            color: var(--brown);
+            margin-bottom: 14px;
+        }
+
+        .section-intro p {
+            font-size: 1rem;
+            font-weight: 300;
+            color: #8a7260;
+            letter-spacing: .03em;
+        }
+
+        /* ── GRID ── */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 28px;
+        }
+
+        /* ── CARD ── */
+        .card {
+            background: var(--warm-white);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 36px 32px 32px;
+            position: relative;
+            overflow: hidden;
+            transition: transform .3s ease, box-shadow .3s ease;
+            animation: fadeUp .55s ease both;
+        }
+
+        .card:nth-child(1) {
+            animation-delay: .3s;
+        }
+
+        .card:nth-child(2) {
+            animation-delay: .42s;
+        }
+
+        .card:nth-child(3) {
+            animation-delay: .54s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 40px rgba(107, 74, 42, .13);
+        }
+
+        /* Top accent bar */
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--caramel), var(--tan));
+            border-radius: 18px 18px 0 0;
+        }
+
+        /* Decorative watermark number */
+        .card-watermark {
+            position: absolute;
+            top: 12px;
+            right: 20px;
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            font-weight: 900;
+            color: var(--cream-dark);
+            line-height: 1;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .card-tag {
+            display: inline-block;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--caramel);
+            margin-bottom: 14px;
+            position: relative;
+        }
+
+        .card-desc {
+            font-size: .92rem;
+            font-weight: 300;
+            color: #7a6550;
+            line-height: 1.6;
+            margin-bottom: 28px;
+            min-height: 44px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 11px 26px;
+            background: var(--caramel);
+            color: var(--warm-white);
+            font-family: 'DM Sans', sans-serif;
+            font-size: .88rem;
+            font-weight: 600;
+            letter-spacing: .04em;
+            border-radius: 10px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: background .2s ease, transform .15s ease;
+        }
+
+        .btn:hover {
+            background: var(--brown);
+            transform: scale(1.03);
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            text-align: center;
+            padding: 28px 20px;
+            border-top: 1px solid var(--border);
+            font-size: .82rem;
+            font-weight: 300;
+            color: #a8917a;
+            letter-spacing: .05em;
+        }
+
+        /* ── Animations ── */
+        @keyframes fadeDown {
+            from {
+                opacity: 0;
+                transform: translateY(-22px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <header class="hero">
+        <div class="hero-deco"></div>
+        <div class="hero-deco-2"></div>
+        <h1 class="hero-title">Travaux Pratiques</h1>
+        <span class="hero-badge">Réalisés par souihla marwa</span>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <div class="section-intro">
+            <h2>Bienvenue sur ma plateforme</h2>
+            <p>Retrouvez ci-dessous les travaux demandés</p>
+        </div>
+
+        <div class="cards-grid">
+
+            <div class="card">
+                <span class="card-watermark">1</span>
+                <div class="card-tag">TP1</div>
+                <p class="card-desc">Création d'un CV et d'un Portfolio personnel</p>
+                <a href="tp1_versionfinal/index.html" class="btn">Voir le TP1</a>
+            </div>
+
+            <div class="card">
+                <span class="card-watermark">2</span>
+                <div class="card-tag">TP2</div>
+                <p class="card-desc">Formulaire d'inscription</p>
+                <a href="tp2/index.html" class="btn">Voir le TP2</a>
+            </div>
+
+            <div class="card">
+                <span class="card-watermark">3</span>
+                <div class="card-tag">TP3</div>
+                <p class="card-desc">Conception d'un site vitrine.</p>
+                <a href="tp3/index.html" class="btn">Voir le TP3</a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        &copy; 2026 Souihla marwa
+    </footer>
+
+</body>
+
+</html>
